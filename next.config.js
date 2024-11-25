@@ -1,12 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production'
-
-
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
   output: 'export',
-  assetPrefix: isProd ? 'https://dillonl.ai/' : '',
  
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
