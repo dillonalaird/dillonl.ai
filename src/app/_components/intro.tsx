@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export function Intro() {
   return (
@@ -19,6 +21,32 @@ export function Intro() {
             I currently work at LandingAI as a Machine Learning Engineer <br/>
             focusing on visual reasoning and agentic frameworks.
           </p>
+          <div className="flex gap-4 mt-4">
+            <a
+              href="https://linkedin.com/in/dillon-laird-5530305b"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-200 transition-colors"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://github.com/dillonalaird"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-200 transition-colors"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://twitter.com/DillonLaird"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-200 transition-colors"
+            >
+              <FaXTwitter size={24} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

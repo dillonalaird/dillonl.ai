@@ -23,6 +23,9 @@ dependencies:
   react-dom:
     specifier: 19.0.0-rc-02c0e824-20241028
     version: 19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028)
+  react-icons:
+    specifier: ^5.4.0
+    version: 5.4.0(react@19.0.0-rc-02c0e824-20241028)
   remark:
     specifier: ^15.0.1
     version: 15.0.1
@@ -1618,6 +1621,14 @@ packages:
     dependencies:
       react: 19.0.0-rc-02c0e824-20241028
       scheduler: 0.25.0-rc-02c0e824-20241028
+    dev: false
+
+  /react-icons@5.4.0(react@19.0.0-rc-02c0e824-20241028):
+    resolution: {integrity: sha512-7eltJxgVt7X64oHh6wSWNwwbKTCtMfK35hcjvJS0yxEAhPM8oUKdS3+kqaW1vicIltw+kR2unHaa12S9pPALoQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 19.0.0-rc-02c0e824-20241028
     dev: false
 
   /react@19.0.0-rc-02c0e824-20241028:
