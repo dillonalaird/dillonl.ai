@@ -7,8 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Dillon Laird's Blog`,
-  description: `Blog posts by Dillon Laird`,
+  title: `Dillon Laird`,
+  description: `Dillon Laird's Personal Website`,
   openGraph: {
     images: [],
   },

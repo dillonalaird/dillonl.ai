@@ -48,7 +48,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = 'blog title';
+  const title = `${post.title} | Dillon Laird`;
 
   return {
     title,
