@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaSquareThreads } from "react-icons/fa6";
 
 export function Intro() {
   return (
@@ -17,7 +17,7 @@ export function Intro() {
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 text-gray-200">
             Dillon Laird
           </h1>
-          <p className="text-lg md:text-xl mt-2 text-gray-300">
+          <p className="text-lg md:text-xl mt-2 text-gray-200">
             I currently work at LandingAI as a Machine Learning Engineer <br/>
             focusing on visual reasoning and agentic frameworks.
           </p>
@@ -37,6 +37,14 @@ export function Intro() {
               className="text-gray-400 hover:text-gray-200 transition-colors"
             >
               <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.threads.net/@dillonlaird"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-200 transition-colors"
+            >
+              <FaSquareThreads size={24} />
             </a>
             <a
               href="https://twitter.com/DillonLaird"
