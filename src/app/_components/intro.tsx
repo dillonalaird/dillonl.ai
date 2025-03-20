@@ -13,8 +13,8 @@ export function Intro() {
           width={512}
           height={512}
         />
-        <div className="flex flex-col p-4 rounded-lg bg-black/50 backdrop-blur-sm">
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 text-white">
+        <div className="flex flex-col p-4 rounded-lg bg-black/10 backdrop-blur-sm">
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 text-gray-200">
             Dillon Laird
           </h1>
           <p className="text-lg md:text-xl mt-2 text-white">
