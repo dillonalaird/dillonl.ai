@@ -69,7 +69,7 @@ In this blog post we introduce [VisionAgent](https://va.landing.ai/agent), an ag
 ## An Agentic Approach to Visual Reasoning 
 To get started, let’s first consider how a human would solve the missing soda can problem. When I solve this task I first locate an empty-looking region in the soda can grid. I then locate cans near the empty region; in this case above and below the regions. To count the number of missing cans I form a sort of grid, so I can see there are 2 cans above the empty spot and therefore the empty spot must consist of 2 missing cans.
 
-![soda cans small](/assets/blog/vision-agent/small/soda_cans_smaller.png)
+![soda cans small](/assets/blog/vision-agent/soda_cans.png)
 
 Now VLMs are not good at localization, so they likely cannot find an empty-looking region like I did. Because they aren’t good at localization, they also cannot find the locations of the soda cans, but there are many tools that would be able to accomplish this task, such as CountGD. So the first task of the agent could be to find a tool that can locate soda cans.
 
@@ -174,7 +174,7 @@ Here, VisionAgent is the “Intelligent system” and the program it generates f
 In this blog post we covered how to use visual design patterns to further enhance our agents visual reasoning skills. We can do all sorts of cool things with this in addition to just finding missing soda cans, such as tracking a queue ball in a pool game, or counting the number of smaller screws on a table. Check out the following prompts and the results from VisionAgent.
 
 **Prompt:** Count the number of missing soda cans and draw a bounding box around them.
-![missing cans](/assets/blog/vision-agent/small/missing_cans_viz_smaller.png)
+![missing cans](/assets/blog/vision-agent/missing_cans_viz.png)
 
 **Prompt:** Count the smaller screws in the image.
-![screws](/assets/blog/vision-agent/small/screws_viz_smaller.png)
+![screws](/assets/blog/vision-agent/screws_viz.png)
