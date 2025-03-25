@@ -171,7 +171,7 @@ The approach we have taken with VisionAgent can be seen as program synthesis, a 
 Here, VisionAgent is the “Intelligent system” and the program it generates for a given task is the “Skill program”. Our tasks are different in the sense that they are vision problems so they do not produce a response or score. However, you can also think of our tasks as the human evaluating the VisionAgent solution, who can provide a response to VisionAgent if it does not perform the task correctly or evaluate it with a score
 
 ## Conclusion
-In this blog post we covered how to use visual design patterns to further enhance our agents visual reasoning skills. We can do all sorts of cool things with this in addition to just finding missing soda cans, such as tracking a queue ball in a pool game, or counting the number of smaller screws on a table. Check out the following prompts and the results from VisionAgent.
+In this blog post we covered how to use visual design patterns to further enhance our agents visual reasoning skills. We can do all sorts of cool things with this in addition to just finding missing soda cans, such as tracking a queue ball in a pool game, or counting the number of smaller screws on a table. You can checkout the [source code](https://github.com/landing-ai/vision-agent) https://github.com/landing-ai/vision-agent if you want to play around with it for yourself. Here's a few more examples of what VisionAgent can do:
 
 **Prompt:** Count the number of missing soda cans and draw a bounding box around them.
 ![missing cans](/assets/blog/vision-agent/missing_cans_viz.png)
