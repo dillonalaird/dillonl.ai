@@ -1,5 +1,5 @@
 ---
-title: "VisionAgent: An Agentic Approach for Complex Reasoning"
+title: "VisionAgent: An Agentic Approach for Complex Visual Reasoning"
 excerpt: "VisionAgent is a novel approach to solve complex visual reasoning tasks."
 coverImage: "/assets/blog/vision-agent/logo_dark.svg"
 date: "2025-03-20T20:24:07.322Z"
