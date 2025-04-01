@@ -157,6 +157,45 @@ For example:
 - If it matches, the action returns a design pattern outline: “Use the detected bounding boxes to infer grid cells, then compare each cell to see which are empty.”
 - This approach helps the planner agent tackle more complex tasks by following structured strategies—especially when straightforward detection alone isn’t enough.
 
+Below is an example of a design pattern used to locate different sized objects. You can see it's a pseudocode prompt that can be sent to the main planner agent to help it solve the problem. Tools are not explicitly stated but instead wrapped in carrot brackets with a description of what's needed. This way it's free to choose any tool that can accomplish the task described in the carrots.
+```python
+<plan>
+# You are trying to order objects into comparative buckets, such as small and large, or
+# small, medium and large. To do this you must first detect the objects, then calculate
+# the bucket of interest (such as area, circumference, etc.) and finally use a
+# clustering algorithm to group the objects into the desired buckets. You can use the
+# following code to help with this task:
+
+from sklearn.cluster import KMeans
+import numpy as np
+
+detections = <a detection tool that also includes segmentation masks>("object", image)
+
+def get_area(detection):
+    return np.sum(detection["mask"])
+
+
+areas = [get_area(detection) for detection in detections]
+X = np.array(areas)[:, None]
+
+kmeans = KMeans(n_clusters=<number of clusters>).fit(X)
+smallest_cluster = np.argmin(kmeans.cluster_centers_)
+largest_cluster = np.argmax(kmeans.cluster_centers_)
+
+clusters = kmeans.predict(X)
+smallest_detections = [
+    detection for detection, cluster in zip(detections, clusters)
+    if cluster == smallest_cluster
+]
+largest_detections = [
+    detection for detection, cluster in zip(detections, clusters)
+    if cluster == largest_cluster
+]
+</plan>
+```
+
+The challenge with visual design patterns is feeding the planner the correct design patterns when solving a problem. Too many unncessarily design patterns can confuse it and if you don't get it the correct pattern it can lead to a failure. 
+
 ## Putting it All Together
 Now that we have covered all 3 components: agentic tool selection and subtasks, composing subtasks and visual design patterns, how do they all work together? We give the planner agent a budget of 10 steps to make when trying to solve a problem, and we also give the planner the ability to use libraries like Matplotlib to plot and visualize results. This allows the planner to go down a path, decide it doesn’t like the results, and then backtrack and find a new path. For example, the planner could use the plan we have described in this blog to find soda cans, but after visualizing the results decide that CountGD did not do a good enough job. It can then backtrack and find a tool to filter the CountGD results such as SigLIP, and then start a new plan where it crops the CountGD objects and filters them with SigLIP to improve performance.
 
