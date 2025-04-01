@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 
+import "highlight.js/styles/atom-one-dark.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

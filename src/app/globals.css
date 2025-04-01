@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Syntax highlighting styles */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+/* Tomorrow Night Theme */
+.hljs {
+  background: #1d1f21;
+  color: #c5c8c6;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #969896;
+}
+
+.hljs-tag,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name,
+.hljs-strong,
+.hljs-keyword,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #f92672;
+}
+
+.hljs-built_in,
+.hljs-function {
+  color: #66d9ef;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-regexp,
+.hljs-link {
+  color: #e6db74;
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-title,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-string,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #a6e22e;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

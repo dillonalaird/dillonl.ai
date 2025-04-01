@@ -36,3 +36,16 @@
 .markdown img {
   @apply mx-auto block;
 }
+
+.markdown pre {
+  @apply rounded-lg overflow-x-auto my-6;
+  max-width: 100%;
+}
+
+.markdown pre code {
+  @apply text-sm;
+}
+
+.markdown code:not(pre code) {
+  @apply bg-gray-100 text-red-600 rounded px-1;
+}
