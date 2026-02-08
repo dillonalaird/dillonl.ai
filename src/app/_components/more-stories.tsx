@@ -3,14 +3,17 @@ import { PostPreview } from "./post-preview";
 
 type Props = {
   posts: Post[];
+  showTitle?: boolean;
 };
 
-export function Posts({ posts }: Props) {
+export function Posts({ posts, showTitle = true }: Props) {
   return (
     <section>
-      <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Posts
-      </h2>
+      {showTitle ? (
+        <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
+          Posts
+        </h2>
+      ) : null}
       <div className="flex flex-col space-y-8 mb-16 max-w-5xl">
         {posts.map((post) => (
           <PostPreview

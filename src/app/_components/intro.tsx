@@ -17,10 +17,6 @@ export function Intro() {
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 text-gray-200">
             Dillon Laird
           </h1>
-          <p className="text-lg md:text-xl mt-2 text-white">
-            I currently work at LandingAI as a Machine Learning Engineer <br/>
-            focusing on visual reasoning and agentic frameworks.
-          </p>
           <div className="flex gap-4 mt-4">
             <a
               href="https://linkedin.com/in/dillon-laird-5530305b"

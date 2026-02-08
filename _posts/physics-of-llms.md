@@ -8,6 +8,7 @@ ogImage:
 ---
 
 ![cover](/assets/blog/physics-of-language-models/physics_of_lms.jpg)
+
 Zeyuan Allen-Zhu’s [“Physics of Language Models”](https://youtu.be/yBL7J0kgldU?si=QsfMpYXNUVsWx-M0) offers a deep dive into the inner workings of large language models (LLMs) and their reasoning processes. As a co-author of the influential [LoRA paper](https://arxiv.org/abs/2106.09685), Zeyuan presents controlled experiments that illuminate LLM abilities using synthetic data and task-specific training. This presentation bridges theoretical understanding with practical insights for building better models. Below is a concise overview of the key takeaways from the nearly two-hour talk.
 
 ### How Do LLMs Store and Retrieve Knowledge?
