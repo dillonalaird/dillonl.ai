@@ -17,15 +17,75 @@ export default function AboutContent() {
           <div className="relative flex justify-center">
             <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
           </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/landing_ai_logo.jpeg"
-              alt="LandingAI logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain bg-white/80"
-            />
-            <div className="text-xl font-semibold">LandingAI</div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/landing_ai_logo.jpeg"
+                alt="LandingAI logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white/80"
+              />
+              <div className="text-xl font-semibold">LandingAI</div>
+            </div>
+            <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-sm text-black/70">
+              <li>
+                Led development of{" "}
+                <a
+                  href="https://github.com/landing-ai/vision-agent"
+                  className="underline underline-offset-4"
+                >
+                  VisionAgent
+                </a>
+                , an agentic framework for generating and executing visual AI
+                pipelines (detection, segmentation, OCR, counting) from natural
+                language prompts. A highly iterative PoC built in the early days
+                of agents.
+              </li>
+              <li>
+                Co-created{" "}
+                <a
+                  href="https://landing.ai/data-centric-ai"
+                  className="underline underline-offset-4"
+                >
+                  Data-Centric AI methodology
+                </a>{" "}
+                with{" "}
+                <a
+                  href="https://www.andrewng.org/"
+                  className="underline underline-offset-4"
+                >
+                  Andrew Ng
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://www.ivanzhou.me/"
+                  className="underline underline-offset-4"
+                >
+                  Ivan Zhou
+                </a>
+                ; helped develop the core concepts and integrated them into our{" "}
+                <a
+                  href="https://landing.ai/landinglens"
+                  className="underline underline-offset-4"
+                >
+                  LandingLens
+                </a>{" "}
+                platform where they were adopted by enterprise customers.
+              </li>
+              <li>
+                Built and scaled the machine learning engineering team from
+                day-one to 11 SWE/MLEs; owned hiring, technical direction, and
+                core ML modeling and infrastructure for{" "}
+                <a
+                  href="https://landing.ai/landinglens"
+                  className="underline underline-offset-4"
+                >
+                  LandingLens
+                </a>
+                .
+              </li>
+            </ul>
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
