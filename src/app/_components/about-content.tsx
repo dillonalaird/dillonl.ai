@@ -95,15 +95,75 @@ export default function AboutContent() {
           <div className="relative flex justify-center">
             <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
           </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/stanford_university_logo.jpeg"
-              alt="Stanford logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain bg-white/80"
-            />
-            <div className="text-xl font-semibold">Stanford</div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/stanford_university_logo.jpeg"
+                alt="Stanford logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white/80"
+              />
+              <div className="text-xl font-semibold">Stanford</div>
+            </div>
+            <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-sm text-black/70">
+              <li>
+                Worked in{" "}
+                <a
+                  href="https://www.andrewng.org/"
+                  className="underline underline-offset-4"
+                >
+                  Andrew Ng&apos;s
+                </a>{" "}
+                lab with{" "}
+                <a
+                  href="https://pranavrajpurkar.com/"
+                  className="underline underline-offset-4"
+                >
+                  Pranav Rajpurkar
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://jirvin16.github.io/"
+                  className="underline underline-offset-4"
+                >
+                  Jeremy Irvin
+                </a>{" "}
+                on AI applications for medical imaging including{" "}
+                <a
+                  href="https://stanfordmlgroup.github.io/competitions/mura/"
+                  className="underline underline-offset-4"
+                >
+                  MURA
+                </a>
+                .
+              </li>
+              <li>
+                Was a member of the first ML bootcamp led by{" "}
+                <a
+                  href="https://awnihannun.com/"
+                  className="underline underline-offset-4"
+                >
+                  Awni Hannun
+                </a>
+                ,{" "}
+                <a
+                  href="https://cs.stanford.edu/~zxie/"
+                  className="underline underline-offset-4"
+                >
+                  Ziang Xie
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://avati.github.io/"
+                  className="underline underline-offset-4"
+                >
+                  Anand Avati
+                </a>
+                . Worked on a variety of projects listed below in Selected
+                Projects.
+              </li>
+            </ul>
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
@@ -113,15 +173,27 @@ export default function AboutContent() {
           <div className="relative flex justify-center">
             <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
           </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/pitchbook_logo.jpeg"
-              alt="PitchBook logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain bg-white/80"
-            />
-            <div className="text-xl font-semibold">PitchBook</div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/pitchbook_logo.jpeg"
+                alt="PitchBook logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white/80"
+              />
+              <div className="text-xl font-semibold">PitchBook</div>
+            </div>
+            <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-sm text-black/70">
+              <li>
+                Built company search and similarity systems using distributed
+                word and entity embeddings.
+              </li>
+              <li>
+                Developed CRF-based information extraction pipelines for private
+                company news.
+              </li>
+            </ul>
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
@@ -131,15 +203,23 @@ export default function AboutContent() {
           <div className="relative flex justify-center">
             <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
           </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/society_consulting_logo.jpeg"
-              alt="Society Consulting logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain bg-white/80"
-            />
-            <div className="text-xl font-semibold">Society Consulting</div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/society_consulting_logo.jpeg"
+                alt="Society Consulting logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white/80"
+              />
+              <div className="text-xl font-semibold">Society Consulting</div>
+            </div>
+            <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-sm text-black/70">
+              <li>
+                Developed integer linear programming software for supply chain
+                optimization.
+              </li>
+            </ul>
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
@@ -149,17 +229,59 @@ export default function AboutContent() {
           <div className="relative flex justify-center">
             <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
           </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/university_of_washington_logo.jpeg"
-              alt="University of Washington logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain bg-white/80"
-            />
-            <div className="text-xl font-semibold">
-              University of Washington
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/university_of_washington_logo.jpeg"
+                alt="University of Washington logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white/80"
+              />
+              <div className="text-xl font-semibold">
+                University of Washington
+              </div>
             </div>
+            <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-sm text-black/70">
+              <li>
+                Worked with{" "}
+                <a
+                  href="https://emilybfox.su.domains/"
+                  className="underline underline-offset-4"
+                >
+                  Emily Fox
+                </a>
+                ,{" "}
+                <a
+                  href="https://nfoti.github.io/"
+                  className="underline underline-offset-4"
+                >
+                  Nick Foti
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://jasonxu90.github.io/"
+                  className="underline underline-offset-4"
+                >
+                  Jason Xu
+                </a>{" "}
+                on{" "}
+                <a
+                  href="https://papers.nips.cc/paper_files/paper/2014/hash/63ed2c35352753435bf749c40b0ce171-Abstract.html"
+                  className="underline underline-offset-4"
+                >
+                  variational methods for hidden Markov models
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://github.com/dillonalaird/pysvihmm"
+                  className="underline underline-offset-4"
+                >
+                  code
+                </a>
+                .
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -224,6 +346,33 @@ export default function AboutContent() {
         <section className="flex flex-col gap-4">
           <h2 className="text-2xl font-semibold">Selected Projects</h2>
           <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
+              <div className="grid grid-cols-[1fr_auto] items-baseline gap-3">
+                <div className="text-lg font-semibold">Vision Agent</div>
+                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                  February 2024
+                </div>
+              </div>
+              <div className="text-sm text-black/70">
+                <strong>D Laird</strong>, Y Cao, S Jagadeesan, H. N. Phan, A.
+                Y. Ng
+              </div>
+              <div className="text-sm">
+                <a
+                  href="https://dillonl.ai/posts/vision-agent"
+                  className="underline underline-offset-4"
+                >
+                  Project
+                </a>{" "}
+                <span className="text-black/40">|</span>{" "}
+                <a
+                  href="https://github.com/landing-ai/vision-agent"
+                  className="underline underline-offset-4"
+                >
+                  Code
+                </a>
+              </div>
+            </div>
             <div className="flex flex-col gap-2">
               <div className="grid grid-cols-[1fr_auto] items-baseline gap-3">
                 <div className="text-lg font-semibold">
