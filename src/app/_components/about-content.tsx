@@ -45,7 +45,7 @@ export default function AboutContent() {
               <li>
                 Co-created{" "}
                 <a
-                  href="https://landing.ai/data-centric-ai"
+                  href="https://www.datacentricai.org/"
                   className="underline underline-offset-4"
                 >
                   Data-Centric AI methodology
