@@ -49,3 +49,31 @@
 .markdown code:not(pre code) {
   @apply bg-gray-100 text-red-600 rounded px-1;
 }
+
+.markdown table {
+  @apply my-6 w-full border-collapse text-base border border-gray-300;
+}
+
+.markdown thead {
+  @apply border-b-2 border-gray-300;
+}
+
+.markdown th {
+  @apply px-4 py-2 text-left font-semibold border-r border-gray-300;
+}
+
+.markdown th:last-child {
+  @apply border-r-0;
+}
+
+.markdown td {
+  @apply px-4 py-2 border-b border-r border-gray-200;
+}
+
+.markdown td:last-child {
+  @apply border-r-0;
+}
+
+.markdown tbody tr:last-child td {
+  @apply border-b-0;
+}
