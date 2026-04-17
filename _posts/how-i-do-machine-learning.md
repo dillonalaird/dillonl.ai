@@ -1,10 +1,10 @@
 ---
 title: "How I do Machine Learning"
 excerpt: "The workflow I've built up over the last ~10 years of applied machine learning: eval sets, error analysis, and treating training data as a hyperparameter."
-coverImage: "/assets/blog/how-i-do-machine-learning/eval-app-main.png"
+coverImage: "/assets/blog/how-i-do-machine-learning/ml-life-cycle.png"
 date: "2026-04-16T20:24:07.322Z"
 ogImage:
-  url: "/assets/blog/how-i-do-machine-learning/eval-app-main.png"
+  url: "/assets/blog/how-i-do-machine-learning/ml-life-cycle.png"
 ---
 
 ### Introduction
