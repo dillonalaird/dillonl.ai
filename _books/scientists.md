@@ -26,4 +26,6 @@ This biography does a good job of exploring both Dirac's scientific contribution
 
 **The Man Who Solved The Market** By Gregory Zuckerman (2019) - I've long been fascinated by hedge funds, particularly Renaissance Technologies run by Jim Simons. This book did a good job overviewing his life, probably better just to watch one of his interviews though such as this one on Numberphile https://www.youtube.com/watch?v=QNznD9hMEh0
 
+**The Infinity Machine: Demis Hassabis, DeepMind and the Quest for Superintelligence** By Sebastian Mallaby (2026) - Gives a history of Demis Hassabis and DeepMind. I like Demis and DeepMind a lot but I did not enjoy this book as much, it gives a very one-sided view of Demis and DeepMind. I'm also very familiar with this area so there wasn't much for me to learn from this book.
+
 **Benjamin Franklin: An American Life** By Walter Isaacson (2003) - Did not enjoy this book at all. I am really not interested in early American history and that coupled with Isaacson's lack of attention to the technical details of Franklin's scientific work made this a slog to get through.
