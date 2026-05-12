@@ -4,15 +4,36 @@ export default function AboutContent() {
   return (
     <div className="flex flex-col gap-8 max-w-2xl pb-16">
       <p className="text-lg md:text-xl text-black/70">
-        I currently work at LandingAI as a Machine Learning Engineer
-        <br />
-        focusing on visual reasoning and agentic frameworks.
+        I currently work at Anthropic as a Member of Technical Staff.
       </p>
       <div className="relative flex flex-col gap-6">
         <span className="absolute left-[135px] top-[22px] bottom-0 w-[2px] bg-black/20" />
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
           <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
-            2017 –
+            2026 –
+          </div>
+          <div className="relative flex justify-center">
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+          </div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/anthropic_logo.jpeg"
+                alt="Anthropic logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white/80"
+              />
+              <div className="text-xl font-semibold">Anthropic</div>
+            </div>
+            <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-sm text-black/70">
+              <li>Working on vision / multimodal research.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="grid grid-cols-[110px_20px_1fr] gap-4">
+          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+            2017 – 2026
           </div>
           <div className="relative flex justify-center">
             <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
