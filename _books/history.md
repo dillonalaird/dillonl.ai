@@ -14,3 +14,5 @@ excerpt: "Books about historical events and figures. Ordered by favorite or most
 **Hannibal: Rome's Greatest Enemy** By Philip Freeman (2022) - Great overview of Hannibal's military career, including his famous crossing of the Alps and battles against Rome. I wish it was a bit longer though, at least spend some more time on relevant context of the time period.
 
 **Titan: The Life of John D. Rockefeller, Sr.** By Ron Chernow (1998) - A comprehensive biography of John D. Rockefeller, the founder of Standard Oil and one of the wealthiest individuals in history, though I found it hard to get through as it went on.
+
+**The Guns of August** By Barbara W. Tuchman (1962) - An overview of the first part of WWI. I didn't really enjoy this book, it focused on a lot of details I didn't care for and did not do a great job explaining the military history.
