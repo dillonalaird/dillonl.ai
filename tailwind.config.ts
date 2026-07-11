@@ -20,6 +20,12 @@ const config: Config = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        paper: "#f6f1e7",
+        ink: "#2b2a26",
+        umber: "#8a6a48",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       spacing: {
         28: "7rem",

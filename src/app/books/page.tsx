@@ -18,23 +18,25 @@ export default async function Books() {
         {sectionsWithHtml.map((section) => (
           <details
             key={section.slug}
-            className="group rounded-2xl p-6"
+            className="group rounded-sm border border-ink/10 bg-white/40 p-6 shadow-sm transition-shadow hover:shadow-md"
           >
             <summary className="list-none cursor-pointer">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                  <h2 className="font-display text-3xl md:text-4xl tracking-tight">
                     {section.title}
                   </h2>
                   {section.excerpt ? (
-                    <p className="mt-2 text-black/60">{section.excerpt}</p>
+                    <p className="mt-2 font-display italic text-black/60">
+                      {section.excerpt}
+                    </p>
                   ) : null}
                 </div>
-                <span className="text-sm text-black/50 group-open:hidden">
-                  Expand
+                <span className="text-xs uppercase tracking-[0.25em] text-umber group-open:hidden mt-2">
+                  Open
                 </span>
-                <span className="text-sm text-black/50 hidden group-open:inline">
-                  Collapse
+                <span className="text-xs uppercase tracking-[0.25em] text-umber hidden group-open:inline mt-2">
+                  Close
                 </span>
               </div>
             </summary>

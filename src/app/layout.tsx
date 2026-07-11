@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import cn from "classnames";
 
 import "highlight.js/styles/atom-one-dark.css";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+});
 
 export const metadata: Metadata = {
   title: `Dillon Laird`,
@@ -31,7 +36,9 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "bg-[#f6f1e7] dark:bg-slate-900 dark:text-slate-400",
+          inter.variable,
+          fraunces.variable,
+          "bg-[#f6f1e7] text-ink paper-grain dark:bg-slate-900 dark:text-slate-400",
         )}
       >
         <div className="min-h-screen">{children}</div>

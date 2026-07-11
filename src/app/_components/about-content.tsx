@@ -7,13 +7,13 @@ export default function AboutContent() {
         I currently work at Anthropic as a Member of Technical Staff.
       </p>
       <div className="relative flex flex-col gap-6">
-        <span className="absolute left-[135px] top-[22px] bottom-0 w-[2px] bg-black/20" />
+        <span className="absolute left-[135px] top-[22px] bottom-0 w-[2px] bg-ink/15" />
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
             2026 –
           </div>
           <div className="relative flex justify-center">
-            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-umber" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
@@ -32,11 +32,11 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
             2017 – 2026
           </div>
           <div className="relative flex justify-center">
-            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-umber" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
@@ -110,11 +110,11 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
             2016 – 2019
           </div>
           <div className="relative flex justify-center">
-            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-umber" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
@@ -188,11 +188,11 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
             2015 – 2016
           </div>
           <div className="relative flex justify-center">
-            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-umber" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
@@ -218,11 +218,11 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
             2014 – 2015
           </div>
           <div className="relative flex justify-center">
-            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-umber" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
@@ -244,11 +244,11 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-black/50 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
             2010 – 2014
           </div>
           <div className="relative flex justify-center">
-            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-black" />
+            <span className="relative z-10 mt-4 h-3 w-3 rounded-full bg-umber" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
@@ -308,7 +308,7 @@ export default function AboutContent() {
       </div>
       <div className="flex flex-col gap-10 mt-10">
         <section className="flex flex-col gap-4">
-          <h2 className="text-2xl font-semibold">Publications</h2>
+          <h2 className="font-display text-3xl tracking-tight">Publications</h2>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <div className="grid grid-cols-[1fr_auto] items-baseline gap-3">
@@ -316,7 +316,7 @@ export default function AboutContent() {
                   MURA: Large Dataset for Abnormality Detection in
                   Musculoskeletal Radiographs
                 </div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   arXiv 2017
                 </div>
               </div>
@@ -339,7 +339,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Stochastic Variational Inference for Hidden Markov Models
                 </div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   NeurIPS 2014
                 </div>
               </div>
@@ -365,12 +365,12 @@ export default function AboutContent() {
           </div>
         </section>
         <section className="flex flex-col gap-4">
-          <h2 className="text-2xl font-semibold">Selected Projects</h2>
+          <h2 className="font-display text-3xl tracking-tight">Selected Projects</h2>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <div className="grid grid-cols-[1fr_auto] items-baseline gap-3">
                 <div className="text-lg font-semibold">Vision Agent</div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   February 2024
                 </div>
               </div>
@@ -399,7 +399,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Data-Centric AI Competition
                 </div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   August 2021
                 </div>
               </div>
@@ -420,7 +420,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Deep Q-Learning with Recurrent Neural Networks
                 </div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   December 2016
                 </div>
               </div>
@@ -448,7 +448,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Using satellite imagery to predict health
                 </div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   June 2017
                 </div>
               </div>
@@ -469,7 +469,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Autoregressive Attention for Parallel Sequence Modeling
                 </div>
-                <div className="text-sm uppercase tracking-widest text-black/50 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
                   March 2017
                 </div>
               </div>
