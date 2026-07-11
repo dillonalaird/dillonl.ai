@@ -1,6 +1,7 @@
 import Link from "next/link";
 import cn from "classnames";
 import Container from "@/app/_components/container";
+import Footer from "@/app/_components/footer";
 import { Intro } from "@/app/_components/intro";
 
 type Section = "about" | "books" | "posts";
@@ -10,10 +11,10 @@ type Props = {
   children: React.ReactNode;
 };
 
-const navItems: { key: Section; label: string; href: string; ordinal: string }[] = [
-  { key: "about", label: "About", href: "/about", ordinal: "i" },
-  { key: "books", label: "Books", href: "/books", ordinal: "ii" },
-  { key: "posts", label: "Posts", href: "/posts", ordinal: "iii" },
+const navItems: { key: Section; label: string; href: string }[] = [
+  { key: "about", label: "About", href: "/about" },
+  { key: "books", label: "Books", href: "/books" },
+  { key: "posts", label: "Posts", href: "/posts" },
 ];
 
 export default function SectionShell({ active, children }: Props) {
@@ -37,27 +38,25 @@ export default function SectionShell({ active, children }: Props) {
         <Intro />
       </section>
       <Container>
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16">
           <nav className="md:w-1/3">
-            <div className="text-xs uppercase tracking-[0.35em] text-umber mb-6">
-              — Index
-            </div>
-            <div className="flex flex-col gap-5">
+            <div className="md:sticky md:top-12 flex flex-col gap-3 pb-4">
               {navItems.map((item) => (
                 <h2
                   key={item.key}
-                  className="font-display text-5xl md:text-6xl tracking-tight leading-tight flex items-baseline gap-4"
+                  className="font-display text-5xl md:text-6xl tracking-tight leading-[1.1]"
                 >
-                  <span className="font-display italic text-base text-umber/80 w-6 shrink-0">
-                    {item.ordinal}.
-                  </span>
                   <Link
                     href={item.href}
                     aria-current={item.key === active ? "page" : undefined}
-                    className={cn("transition-colors duration-300", {
-                      "text-ink italic ink-underline": item.key === active,
-                      "text-ink/35 hover:text-ink/70": item.key !== active,
-                    })}
+                    className={cn(
+                      "inline-block transition-all duration-500 ease-out",
+                      {
+                        "text-ink italic": item.key === active,
+                        "text-ink/30 hover:text-ink/70 hover:translate-x-2":
+                          item.key !== active,
+                      },
+                    )}
                   >
                     {item.label}
                   </Link>
@@ -65,9 +64,10 @@ export default function SectionShell({ active, children }: Props) {
               ))}
             </div>
           </nav>
-          <div className="md:w-2/3">{children}</div>
+          <div className="md:w-2/3 min-h-[40vh]">{children}</div>
         </div>
       </Container>
+      <Footer />
     </main>
   );
 }

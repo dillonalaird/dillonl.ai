@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CoverImage from "./cover-image";
+import Image from "next/image";
 import DateFormatter from "./date-formatter";
 
 type Props = {
@@ -18,26 +18,37 @@ export function PostPreview({
   slug,
 }: Props) {
   return (
-    <div className="flex gap-6 items-start pt-8 first:pt-0">
-      <div className="flex-shrink-0 w-1/3">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+    <Link
+      href={`/posts/${slug}`}
+      className="group grid md:grid-cols-2 gap-6 md:gap-10 items-center py-10"
+    >
+      <div className="overflow-hidden rounded-sm">
+        <Image
+          src={coverImage}
+          alt={`Cover Image for ${title}`}
+          width={1024}
+          height={1024}
+          className="w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        />
       </div>
-
-      <div className="flex-grow flex gap-6">
-        <div className="w-1/2">
-          <h3 className="font-display text-3xl mb-3 leading-snug">
-            <Link href={`/posts/${slug}`} className="hover:underline decoration-umber/60 underline-offset-4">
-              {title}
-            </Link>
-          </h3>
-          <div className="text-xs uppercase tracking-[0.25em] text-umber mb-4">
-            <DateFormatter dateString={date} />
-          </div>
+      <div>
+        <div className="text-xs uppercase tracking-[0.25em] text-umber mb-3">
+          <DateFormatter dateString={date} />
         </div>
-        <div className="w-1/2">
-          <p className="text-lg leading-relaxed text-black/70">{excerpt}</p>
-        </div>
+        <h3 className="font-display text-3xl md:text-4xl tracking-tight leading-tight">
+          {title}
+        </h3>
+        <p className="mt-4 text-black/70 leading-relaxed">{excerpt}</p>
+        <span className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-umber">
+          Read
+          <span
+            aria-hidden
+            className="transition-transform duration-500 ease-out group-hover:translate-x-2"
+          >
+            →
+          </span>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }

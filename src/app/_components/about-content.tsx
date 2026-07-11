@@ -1,12 +1,15 @@
 import Image from "next/image";
+import Reveal from "@/app/_components/reveal";
 
 export default function AboutContent() {
   return (
     <div className="flex flex-col gap-8 max-w-2xl pb-16">
-      <p className="text-lg md:text-xl text-black/70">
-        I currently work at Anthropic as a Member of Technical Staff.
-      </p>
-      <div className="relative flex flex-col gap-6">
+      <Reveal>
+        <p className="text-lg md:text-xl text-black/70">
+          I currently work at Anthropic as a Member of Technical Staff.
+        </p>
+      </Reveal>
+      <Reveal delay={100} className="relative flex flex-col gap-6">
         <span className="absolute left-[135px] top-[22px] bottom-0 w-[2px] bg-ink/15" />
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
           <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
@@ -305,8 +308,9 @@ export default function AboutContent() {
             </ul>
           </div>
         </div>
-      </div>
+      </Reveal>
       <div className="flex flex-col gap-10 mt-10">
+        <Reveal>
         <section className="flex flex-col gap-4">
           <h2 className="font-display text-3xl tracking-tight">Publications</h2>
           <div className="flex flex-col gap-4">
@@ -364,6 +368,8 @@ export default function AboutContent() {
             </div>
           </div>
         </section>
+        </Reveal>
+        <Reveal>
         <section className="flex flex-col gap-4">
           <h2 className="font-display text-3xl tracking-tight">Selected Projects</h2>
           <div className="flex flex-col gap-4">
@@ -487,6 +493,7 @@ export default function AboutContent() {
             </div>
           </div>
         </section>
+        </Reveal>
       </div>
     </div>
   );

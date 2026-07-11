@@ -1,5 +1,6 @@
 import { Post } from "@/interfaces/post";
 import { PostPreview } from "./post-preview";
+import Reveal from "./reveal";
 
 type Props = {
   posts: Post[];
@@ -14,16 +15,21 @@ export function Posts({ posts, showTitle = true }: Props) {
           Posts
         </h2>
       ) : null}
-      <div className="flex flex-col divide-y divide-ink/10 space-y-8 mb-16 max-w-5xl">
-        {posts.map((post) => (
-          <PostPreview
+      <div className="flex flex-col mb-16 max-w-5xl">
+        {posts.map((post, i) => (
+          <Reveal
             key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            slug={post.slug}
-            excerpt={post.excerpt}
-          />
+            delay={Math.min(i, 3) * 100}
+            className="border-t border-ink/10 first:border-t-0"
+          >
+            <PostPreview
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+          </Reveal>
         ))}
       </div>
     </section>

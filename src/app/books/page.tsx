@@ -1,5 +1,6 @@
 import SectionShell from "@/app/_components/section-shell";
-import markdownStyles from "@/app/_components/markdown-styles.module.css";
+import BookSection from "@/app/_components/book-section";
+import Reveal from "@/app/_components/reveal";
 import { getAllBookSections } from "@/lib/books";
 import markdownToHtml from "@/lib/markdownToHtml";
 
@@ -14,37 +15,19 @@ export default async function Books() {
 
   return (
     <SectionShell active="books">
-      <div className="flex flex-col gap-6">
-        {sectionsWithHtml.map((section) => (
-          <details
+      <div className="flex flex-col border-b border-ink/15">
+        {sectionsWithHtml.map((section, i) => (
+          <Reveal
             key={section.slug}
-            className="group rounded-sm border border-ink/10 bg-white/40 p-6 shadow-sm transition-shadow hover:shadow-md"
+            delay={Math.min(i, 4) * 80}
+            className="border-t border-ink/15"
           >
-            <summary className="list-none cursor-pointer">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h2 className="font-display text-3xl md:text-4xl tracking-tight">
-                    {section.title}
-                  </h2>
-                  {section.excerpt ? (
-                    <p className="mt-2 font-display italic text-black/60">
-                      {section.excerpt}
-                    </p>
-                  ) : null}
-                </div>
-                <span className="text-xs uppercase tracking-[0.25em] text-umber group-open:hidden mt-2">
-                  Open
-                </span>
-                <span className="text-xs uppercase tracking-[0.25em] text-umber hidden group-open:inline mt-2">
-                  Close
-                </span>
-              </div>
-            </summary>
-            <div
-              className={`mt-6 ${markdownStyles.markdown}`}
-              dangerouslySetInnerHTML={{ __html: section.content }}
+            <BookSection
+              title={section.title}
+              excerpt={section.excerpt}
+              contentHtml={section.content}
             />
-          </details>
+          </Reveal>
         ))}
       </div>
     </SectionShell>
