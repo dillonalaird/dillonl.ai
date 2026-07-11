@@ -8,7 +8,6 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const fraunces = Fraunces({
   subsets: ["latin"],
-  style: ["normal", "italic"],
   variable: "--font-display",
 });
 

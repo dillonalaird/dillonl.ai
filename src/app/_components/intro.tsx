@@ -44,7 +44,7 @@ export function Intro() {
             Dillon Laird
           </h1>
           <p
-            className="font-display italic text-lg md:text-2xl text-paper/80 mt-2"
+            className="font-display text-lg md:text-2xl text-paper/80 mt-2"
             style={{ textShadow: "0 1px 12px rgba(0,0,0,0.6)" }}
           >
             vision &amp; multimodal research

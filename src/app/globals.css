@@ -40,37 +40,6 @@ html {
   transform: none;
 }
 
-/* Full-width band of the hero painting with a parallax feel */
-.ink-band {
-  background-image: url(/assets/art.jpg);
-  background-size: cover;
-  background-position: center 35%;
-  background-attachment: fixed;
-}
-
-/* Endless italic marquee */
-.marquee {
-  overflow: hidden;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 40s linear infinite;
-}
-
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 768px) {
-  .ink-band {
-    background-attachment: scroll;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -79,9 +48,6 @@ html {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-  .marquee-track {
-    animation: none;
   }
 }
 
