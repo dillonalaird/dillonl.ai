@@ -95,7 +95,7 @@ export default function Index() {
       </section>
 
       {/* Content sheet sliding over the hero */}
-      <div className="relative z-10 bg-paper rounded-t-[2.5rem] shadow-[0_-24px_80px_rgba(0,0,0,0.35)]">
+      <div className="relative z-10 bg-paper shadow-[0_-24px_80px_rgba(0,0,0,0.35)]">
         <section className="px-6 md:px-12 pt-24 md:pt-32 pb-20 max-w-4xl">
           <Reveal>
             <p className="font-display text-3xl md:text-5xl leading-tight tracking-tight">
