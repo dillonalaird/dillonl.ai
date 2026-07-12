@@ -98,8 +98,8 @@ export default function Index() {
         <section className="px-6 md:px-12 pt-24 md:pt-32 pb-20 max-w-4xl">
           <Reveal>
             <p className="font-display text-3xl md:text-5xl leading-tight tracking-tight">
-              I work on how machines see — vision and multimodal research at
-              Anthropic.
+              I&apos;m a researcher at Anthropic, working on vision and
+              multimodal models.
             </p>
           </Reveal>
         </section>
