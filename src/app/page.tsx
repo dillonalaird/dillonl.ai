@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter, FaSquareThreads } from "react-icons/fa6";
 import { HeroFx } from "@/app/_components/scroll-fx";
 import ArtBand from "@/app/_components/art-band";
-import ColorField from "@/app/_components/color-field";
 import Reveal from "@/app/_components/reveal";
 import SiteFooter from "@/app/_components/site-footer";
 import { PostPreview } from "@/app/_components/post-preview";
@@ -166,7 +165,6 @@ export default function Index() {
           </div>
         </section>
 
-        <ColorField height="55vh" />
         <SiteFooter />
       </div>
     </main>
