@@ -14,16 +14,9 @@ const items = [
 export default function SiteNav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    let lastY = window.scrollY;
-    const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 40);
-      setHidden(y > lastY && y > 160);
-      lastY = y;
-    };
+    const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -32,8 +25,7 @@ export default function SiteNav() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-out",
-        hidden ? "-translate-y-full" : "translate-y-0",
+        "fixed top-0 inset-x-0 z-50 transition-colors duration-500 ease-out",
         scrolled
           ? "bg-paper/85 backdrop-blur-sm text-ink shadow-[0_1px_0_rgba(43,42,38,0.08)]"
           : "mix-blend-difference text-white",
