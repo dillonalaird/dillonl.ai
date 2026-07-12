@@ -21,7 +21,7 @@ export default function AboutPage() {
               alt="Dillon Laird"
               width={512}
               height={512}
-              className="w-40 h-40 md:w-64 md:h-64 rounded-sm object-cover shadow-md"
+              className="w-40 h-40 md:w-64 md:h-64 rounded-full object-cover border-4 border-paper/70 shadow-md"
             />
           </Reveal>
           <AboutContent />
