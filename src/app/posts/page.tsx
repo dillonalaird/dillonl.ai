@@ -12,7 +12,6 @@ export default function PostsIndex() {
         src="/assets/art/monet-parliament-fog.jpg"
         title="Posts"
         caption="Claude Monet — The Houses of Parliament (Effect of Fog), 1903, oil on canvas"
-        tone="dark"
       />
       <div className="relative z-10 bg-paper">
         <div className="px-6 md:px-12 py-16 md:py-24 max-w-6xl">

@@ -20,7 +20,6 @@ export default async function Books() {
         src="/assets/art/monet-graystacks.jpg"
         title="Books"
         caption="Claude Monet — Grainstack (Sunset), 1891, oil on canvas"
-        tone="dark"
       />
       <div className="relative z-10 bg-paper">
         <div className="px-6 md:px-12 py-16 md:py-24 max-w-5xl">

@@ -28,7 +28,7 @@ export default function SiteNav() {
         "fixed top-0 inset-x-0 z-50 transition-colors duration-500 ease-out",
         scrolled
           ? "bg-paper/85 backdrop-blur-sm text-ink shadow-[0_1px_0_rgba(43,42,38,0.08)]"
-          : "mix-blend-difference text-white",
+          : "text-paper drop-shadow-[0_1px_6px_rgba(0,0,0,0.55)]",
       )}
     >
       <div className="flex items-center justify-between px-6 md:px-12 py-5">

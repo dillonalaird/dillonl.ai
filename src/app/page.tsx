@@ -47,6 +47,10 @@ export default function Index() {
         className="relative h-screen bg-fixed bg-cover bg-center"
         style={{ backgroundImage: "url(/assets/art.jpg)" }}
       >
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-ink/45 to-transparent"
+        />
         <HeroFx className="absolute inset-x-0 bottom-0 px-6 md:px-12 pb-16">
           <h1
             className="font-display text-[15vw] md:text-[11vw] leading-none tracking-tight text-paper"
@@ -82,7 +86,7 @@ export default function Index() {
             href="https://theawakenedeye.com/artisans/bev-byrnes/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-ink/60 hover:text-ink transition-colors"
+            className="text-paper/75 hover:text-paper transition-colors"
           >
             Bev Byrnes — Pathless Path, ink and tea stain on Kumohadamashi
             paper
