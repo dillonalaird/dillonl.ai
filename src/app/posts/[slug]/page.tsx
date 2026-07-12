@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
+import SiteFooter from "@/app/_components/site-footer";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
@@ -20,8 +20,7 @@ export default async function Post(props: Params) {
   return (
     <main>
       <Container>
-        <Header />
-        <article className="mb-32">
+        <article className="pt-28 md:pt-36 mb-32">
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}
@@ -30,6 +29,7 @@ export default async function Post(props: Params) {
           <PostBody content={content} />
         </article>
       </Container>
+      <SiteFooter />
     </main>
   );
 }

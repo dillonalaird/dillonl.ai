@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import cn from "classnames";
+import SiteNav from "@/app/_components/site-nav";
 
 import "highlight.js/styles/atom-one-dark.css";
 import "./globals.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
           "bg-[#f6f1e7] text-ink paper-grain dark:bg-slate-900 dark:text-slate-400",
         )}
       >
+        <SiteNav />
         <div className="min-h-screen">{children}</div>
       </body>
     </html>
