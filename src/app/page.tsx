@@ -78,6 +78,17 @@ export default function Index() {
             </div>
           </div>
         </HeroFx>
+        <figcaption className="absolute top-20 right-6 md:right-12 text-[11px] uppercase tracking-[0.25em]">
+          <a
+            href="https://theawakenedeye.com/artisans/bev-byrnes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink/60 hover:text-ink transition-colors"
+          >
+            Bev Byrnes — Pathless Path, ink and tea stain on Kumohadamashi
+            paper
+          </a>
+        </figcaption>
         <div className="absolute bottom-6 right-6 md:right-12 text-paper/50 text-[11px] uppercase tracking-[0.3em]">
           Scroll
         </div>
