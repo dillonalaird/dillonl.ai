@@ -44,9 +44,9 @@ export default async function Books() {
   return (
     <main>
       <PageHero
-        src="/assets/art/monet-graystacks.jpg"
+        src="/assets/art/monet-sunset-lavacourt.jpg"
         title="Books"
-        caption="Claude Monet — Grainstack (Sunset), 1891, oil on canvas"
+        caption="Claude Monet — Sunset on the Seine at Lavacourt, Winter Effect, 1880, oil on canvas"
       />
       <div className="relative z-10 bg-paper">
         <section className="px-6 md:px-12 pt-16 md:pt-24">
