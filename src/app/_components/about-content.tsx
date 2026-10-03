@@ -10,9 +10,9 @@ export default function AboutContent() {
         </p>
       </Reveal>
       <Reveal delay={100} className="relative flex flex-col gap-6">
-        <span className="absolute left-[135px] top-[22px] bottom-0 w-[2px] bg-ink/15" />
+        <span className="absolute left-[135px] top-[22px] bottom-0 w-[2px] bg-umber opacity-25" />
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber text-right pt-1 mt-2 whitespace-nowrap">
             2026 –
           </div>
           <div className="relative flex justify-center">
@@ -35,7 +35,7 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber text-right pt-1 mt-2 whitespace-nowrap">
             2017 – 2026
           </div>
           <div className="relative flex justify-center">
@@ -113,7 +113,7 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber text-right pt-1 mt-2 whitespace-nowrap">
             2016 – 2019
           </div>
           <div className="relative flex justify-center">
@@ -191,7 +191,7 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber text-right pt-1 mt-2 whitespace-nowrap">
             2015 – 2016
           </div>
           <div className="relative flex justify-center">
@@ -221,7 +221,7 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber text-right pt-1 mt-2 whitespace-nowrap">
             2014 – 2015
           </div>
           <div className="relative flex justify-center">
@@ -247,7 +247,7 @@ export default function AboutContent() {
           </div>
         </div>
         <div className="grid grid-cols-[110px_20px_1fr] gap-4">
-          <div className="text-sm uppercase tracking-widest text-umber/90 text-right pt-1 mt-2 whitespace-nowrap">
+          <div className="text-sm uppercase tracking-widest text-umber text-right pt-1 mt-2 whitespace-nowrap">
             2010 – 2014
           </div>
           <div className="relative flex justify-center">
@@ -320,7 +320,7 @@ export default function AboutContent() {
                   MURA: Large Dataset for Abnormality Detection in
                   Musculoskeletal Radiographs
                 </div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   arXiv 2017
                 </div>
               </div>
@@ -343,7 +343,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Stochastic Variational Inference for Hidden Markov Models
                 </div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   NeurIPS 2014
                 </div>
               </div>
@@ -376,7 +376,7 @@ export default function AboutContent() {
             <div className="flex flex-col gap-2">
               <div className="grid grid-cols-[1fr_auto] items-baseline gap-3">
                 <div className="text-lg font-semibold">Vision Agent</div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   February 2024
                 </div>
               </div>
@@ -405,7 +405,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Data-Centric AI Competition
                 </div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   August 2021
                 </div>
               </div>
@@ -426,7 +426,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Deep Q-Learning with Recurrent Neural Networks
                 </div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   December 2016
                 </div>
               </div>
@@ -454,7 +454,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Using satellite imagery to predict health
                 </div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   June 2017
                 </div>
               </div>
@@ -475,7 +475,7 @@ export default function AboutContent() {
                 <div className="text-lg font-semibold">
                   Autoregressive Attention for Parallel Sequence Modeling
                 </div>
-                <div className="text-sm uppercase tracking-widest text-umber/90 text-right">
+                <div className="text-sm uppercase tracking-widest text-umber text-right">
                   March 2017
                 </div>
               </div>

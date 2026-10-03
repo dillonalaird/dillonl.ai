@@ -9,9 +9,8 @@ export default function PostsIndex() {
   return (
     <main>
       <PageHero
-        src="/assets/art/monet-parliament-fog.jpg"
+        painting="fog"
         title="Posts"
-        caption="Claude Monet — The Houses of Parliament (Effect of Fog), 1903, oil on canvas"
       />
       <div className="relative z-10 bg-paper">
         <div className="px-6 md:px-12 py-16 md:py-24 max-w-6xl">

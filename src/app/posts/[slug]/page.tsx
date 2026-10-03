@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
+import { PageLight } from "@/app/_components/light/store";
 import SiteFooter from "@/app/_components/site-footer";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
@@ -19,6 +20,7 @@ export default async function Post(props: Params) {
 
   return (
     <main>
+      <PageLight id="pathless" />
       <Container>
         <article className="pt-28 md:pt-36 mb-32">
           <PostHeader

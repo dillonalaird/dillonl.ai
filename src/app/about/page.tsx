@@ -8,9 +8,8 @@ export default function AboutPage() {
   return (
     <main>
       <PageHero
-        src="/assets/art/monet-charing-cross.jpg"
+        painting="charing"
         title="About"
-        caption="Claude Monet — Charing Cross Bridge, c. 1900, oil on canvas"
       />
       <div className="relative z-10 bg-paper">
         <div className="px-6 md:px-12 py-16 md:py-24 flex flex-col md:flex-row gap-12 md:gap-16">

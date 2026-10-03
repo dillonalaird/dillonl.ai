@@ -20,7 +20,7 @@ export function Posts({ posts, showTitle = true }: Props) {
           <Reveal
             key={post.slug}
             delay={Math.min(i, 3) * 100}
-            className="border-t border-ink/10 first:border-t-0"
+            className="light-rule border-t first:border-t-0"
           >
             <PostPreview
               title={post.title}

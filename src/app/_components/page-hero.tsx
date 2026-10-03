@@ -1,23 +1,28 @@
 import { Parallax } from "@/app/_components/scroll-fx";
+import { PageLight } from "@/app/_components/light/store";
+import { PAINTINGS, caption as museumCaption, type PaintingId } from "@/lib/light";
 
 type Props = {
-  src: string;
+  painting: PaintingId; // the page's light is sampled from this painting
   title: string;
   epigraph?: string; // short lowercase koan under the title
-  caption: string; // museum style: Artist — Title, year, medium
 };
 
-export default function PageHero({ src, title, epigraph, caption }: Props) {
+export default function PageHero({ painting, title, epigraph }: Props) {
+  const p = PAINTINGS[painting];
+  const src = p.src;
+  const caption = museumCaption(p);
   return (
-    <section className="relative h-[68vh] min-h-[440px] overflow-hidden">
+    <section className="relative h-[68vh] min-h-[440px] overflow-hidden bg-shade">
+      <PageLight id={painting} />
       <Parallax
         amount={80}
         className="absolute inset-0"
         innerClassName="absolute -inset-y-[12%] inset-x-0"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${src})` }}
+          className="absolute inset-0 bg-cover"
+          style={{ backgroundImage: `url(${src})`, backgroundPosition: p.focus }}
         />
       </Parallax>
       <div

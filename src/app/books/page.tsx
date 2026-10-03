@@ -44,16 +44,15 @@ export default async function Books() {
   return (
     <main>
       <PageHero
-        src="/assets/art/monet-sunset-lavacourt.jpg"
+        painting="lavacourt"
         title="Books"
-        caption="Claude Monet — Sunset on the Seine at Lavacourt, Winter Effect, 1880, oil on canvas"
       />
       <div className="relative z-10 bg-paper">
         <section className="px-6 md:px-12 pt-16 md:pt-24">
           <div className="text-xs uppercase tracking-[0.25em] text-umber mb-8">
             Favorite picks
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/15 border border-ink/15 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px light-grid border mb-16 md:mb-24">
             {favorites.map((book, i) => (
               <Reveal key={book.title} delay={i * 80} className="bg-paper">
                 <div className="flex h-full flex-col justify-between gap-10 p-6">
@@ -77,12 +76,12 @@ export default async function Books() {
           </div>
         </section>
         <div className="px-6 md:px-12 pb-16 md:pb-24 max-w-5xl">
-          <div className="flex flex-col border-b border-ink/15">
+          <div className="light-rule flex flex-col border-b">
             {sectionsWithHtml.map((section, i) => (
               <Reveal
                 key={section.slug}
                 delay={Math.min(i, 4) * 80}
-                className="border-t border-ink/15"
+                className="light-rule border-t"
               >
                 <BookSection
                   title={section.title}
