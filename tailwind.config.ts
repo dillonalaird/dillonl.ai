@@ -22,7 +22,8 @@ const config: Config = {
         cyan: "#79FFE1",
         paper: "#f6f1e7",
         ink: "#2b2a26",
-        umber: "#8a6a48",
+        umber: "var(--accent)",
+        shade: "var(--shade)",
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],

@@ -2,10 +2,15 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter, FaSquareThreads } from "react-icons/fa6";
 import { HeroFx } from "@/app/_components/scroll-fx";
-import ArtBand from "@/app/_components/art-band";
+import Image from "next/image";
+import DateFormatter from "@/app/_components/date-formatter";
+import LightSplit from "@/app/_components/light/light-split";
+import {
+  PaintingIndex,
+  SectionIndex,
+} from "@/app/_components/light/light-links";
 import Reveal from "@/app/_components/reveal";
 import SiteFooter from "@/app/_components/site-footer";
-import { PostPreview } from "@/app/_components/post-preview";
 import { getAllPosts } from "@/lib/api";
 
 const socials = [
@@ -31,11 +36,13 @@ const socials = [
   },
 ];
 
-const sections = [
-  { label: "About", href: "/about", note: "Work, publications, projects" },
-  { label: "Books", href: "/books", note: "What I've been reading" },
-  { label: "Posts", href: "/posts", note: "Writing on machine learning" },
-];
+function Label({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-8 text-xs uppercase tracking-[0.25em] text-umber transition-colors duration-700">
+      {children}
+    </div>
+  );
+}
 
 export default function Index() {
   const recentPosts = getAllPosts().slice(0, 3);
@@ -97,77 +104,115 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Content sheet sliding over the hero */}
+      {/* Content sheet sliding over the hero: a sticky painting whose light
+          follows the hour, beside the sections it changes with */}
       <div className="relative z-10 bg-paper shadow-[0_-24px_80px_rgba(0,0,0,0.35)]">
-        <section className="px-6 md:px-12 pt-24 md:pt-32 pb-20 max-w-4xl">
-          <Reveal>
-            <p className="font-display text-3xl md:text-5xl leading-tight tracking-tight">
-              I&apos;m a researcher at Anthropic, working on vision and
-              multimodal models.
-            </p>
-          </Reveal>
-        </section>
-
-        <nav className="border-t border-ink/10">
-          {sections.map((s, i) => (
-            <Reveal key={s.href} delay={i * 80}>
-              <Link
-                href={s.href}
-                className="group flex items-baseline justify-between px-6 md:px-12 py-8 md:py-10 border-b border-ink/10"
-              >
-                <span className="font-display text-5xl md:text-7xl tracking-tight transition-transform duration-500 ease-out group-hover:translate-x-3">
-                  {s.label}
-                </span>
-                <span className="hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-umber">
-                  {s.note}
-                  <span
-                    aria-hidden
-                    className="transition-transform duration-500 ease-out group-hover:translate-x-2"
-                  >
-                    →
-                  </span>
-                </span>
-              </Link>
+        <LightSplit>
+          <section
+            data-light-section
+            className="flex flex-col justify-center px-5 md:px-12 lg:px-16 pt-16 pb-24 md:min-h-screen md:py-32"
+          >
+            <Label>Now</Label>
+            <Reveal>
+              <p className="font-display text-3xl md:text-5xl leading-[1.12] tracking-tight">
+                I&apos;m a researcher at Anthropic, working on vision and
+                multimodal models.
+              </p>
             </Reveal>
-          ))}
-        </nav>
+            <Reveal delay={120}>
+              <p className="mt-8 max-w-md text-base leading-relaxed text-ink/60">
+                Before that, nine years at LandingAI: building the ML team for
+                LandingLens, co-creating Data-Centric AI with Andrew Ng, and
+                leading VisionAgent.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-[0.25em]">
+                {socials.map(({ href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="light-link text-ink/60 underline underline-offset-[6px]"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </Reveal>
+          </section>
 
-        <ArtBand
-          src="/assets/art/monet-parliament-fog.jpg"
-          caption="Claude Monet — The Houses of Parliament (Effect of Fog), 1903, oil on canvas"
-          tone="dark"
-        />
+          <section
+            data-light-section
+            className="flex flex-col justify-center px-5 md:px-12 lg:px-16 py-20 md:min-h-screen md:py-32"
+          >
+            <Label>Index</Label>
+            <SectionIndex />
+          </section>
 
-        <section className="px-6 md:px-12 py-20 md:py-28">
-          <div className="flex items-baseline justify-between mb-10">
-            <h2 className="font-display text-4xl md:text-6xl tracking-tight">
-              Recent writing
-            </h2>
-            <Link
-              href="/posts"
-              className="text-xs uppercase tracking-[0.25em] text-umber hover:text-ink transition-colors"
-            >
-              All posts →
-            </Link>
-          </div>
-          <div className="flex flex-col max-w-5xl">
-            {recentPosts.map((post, i) => (
-              <Reveal
-                key={post.slug}
-                delay={Math.min(i, 3) * 100}
-                className="border-t border-ink/10 first:border-t-0"
+          <section
+            data-light-section
+            className="flex flex-col justify-center px-5 md:px-12 lg:px-16 py-20 md:min-h-screen md:py-32"
+          >
+            <div className="flex items-baseline justify-between">
+              <Label>Recent writing</Label>
+              <Link
+                href="/posts"
+                className="mb-8 text-xs uppercase tracking-[0.25em] text-ink/50 hover:text-umber transition-colors"
               >
-                <PostPreview
-                  title={post.title}
-                  coverImage={post.coverImage}
-                  date={post.date}
-                  slug={post.slug}
-                  excerpt={post.excerpt}
-                />
-              </Reveal>
-            ))}
-          </div>
-        </section>
+                All posts →
+              </Link>
+            </div>
+            <div className="light-rule flex flex-col border-t">
+              {recentPosts.map((post, i) => (
+                <Reveal
+                  key={post.slug}
+                  delay={Math.min(i, 3) * 100}
+                  className="light-rule border-b"
+                >
+                  <Link
+                    href={`/posts/${post.slug}`}
+                    className="group grid grid-cols-[1fr_5.5rem] md:grid-cols-[1fr_8rem] gap-5 md:gap-8 items-center py-7"
+                  >
+                    <div>
+                      <div className="mb-2 text-[11px] uppercase tracking-[0.25em] text-umber">
+                        <DateFormatter dateString={post.date} />
+                      </div>
+                      <h3 className="font-display text-2xl md:text-3xl leading-tight tracking-tight transition-transform duration-500 ease-out group-hover:translate-x-2">
+                        {post.title}
+                      </h3>
+                      <p className="mt-2 hidden md:block text-sm leading-relaxed text-ink/60 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                    <div className="aspect-square overflow-hidden">
+                      <Image
+                        src={post.coverImage}
+                        alt=""
+                        width={256}
+                        height={256}
+                        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                      />
+                    </div>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section
+            data-light-section
+            className="flex flex-col justify-center px-5 md:px-12 lg:px-16 py-20 md:min-h-screen md:py-32"
+          >
+            <Label>The light</Label>
+            <p className="mb-10 max-w-md text-base leading-relaxed text-ink/60">
+              Monet painted the same places again and again, at different
+              hours. The painting beside this page starts at your local time
+              and moves through the day as you read. Drag the timeline under
+              it, or pick an hour.
+            </p>
+            <PaintingIndex />
+          </section>
+        </LightSplit>
 
         <SiteFooter />
       </div>

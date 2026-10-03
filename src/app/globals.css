@@ -4,8 +4,57 @@
 
 /* --- Artistic theme --- */
 
+/* --- Changing light ---
+   The accent is sampled from whichever painting is in view. Registered as
+   colors so the browser can interpolate them when the light changes. */
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #8a6a48;
+}
+@property --shade {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #3b3a34;
+}
+
+:root {
+  --accent: #8a6a48;
+  --shade: #3b3a34;
+  transition:
+    --accent 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    --shade 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 ::selection {
-  background: rgba(138, 106, 72, 0.25); /* umber wash */
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+/* rule lines tinted by the light */
+.light-rule {
+  border-color: color-mix(in srgb, var(--accent) 24%, rgba(43, 42, 38, 0.08));
+}
+
+a.light-link {
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  transition: color 0.4s, text-decoration-color 0.4s;
+}
+a.light-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* caption swaps in from below with a hard edge, no fade */
+@keyframes light-caption-in {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: none;
+  }
+}
+.light-caption {
+  animation: light-caption-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Subtle paper grain over the whole page */
@@ -43,6 +92,12 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  :root {
+    transition: none;
+  }
+  .light-caption {
+    animation: none;
   }
   .reveal {
     opacity: 1;
@@ -113,9 +168,21 @@ code.hljs {
 }
 
 .hljs-emphasis {
-  font-style: italic;
+  font-style: normal;
 }
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.light-grid {
+  background: color-mix(in srgb, var(--accent) 24%, rgba(43, 42, 38, 0.08));
+  border-color: color-mix(in srgb, var(--accent) 24%, rgba(43, 42, 38, 0.08));
+}
+
+main a.underline {
+  transition: color 0.4s;
+}
+main a.underline:hover {
+  color: var(--accent);
 }
