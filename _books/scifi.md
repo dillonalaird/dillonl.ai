@@ -13,17 +13,17 @@ asimov.md
 
 **Flowers for Algernon** By Daniel Keyes (1959) - A touching story about a mentally disabled man who is given the chance to become a genius. The emotional depth of the story is impressive.
 
-**Wool, Shift, Dust** By Hugh Howey (2011, 2012, 2013) - A post-apocalyptic series with an onion-like structure of of mysteries that keep you engaged. I thought the ending was good as well, not too cliché.
+**Wool, Shift, Dust** By Hugh Howey (2011, 2012, 2013) - A post-apocalyptic series with an onion-like structure of mysteries that keep you engaged. I thought the ending was good as well, not too cliché.
 
 **Hyperion, The Fall of Hyperion** By Dan Simmons (1989, 1990) - Time travel, AI, religion, this book has A LOT and is WEIRD but I ended up enjoying it. The worst part was the author's need to integrate John Keats into the story which kind of ruins it for me.
 
-**Stories of Your Life and Others** by Ted Chiang (2002) - A collection of short stories, they are pretty interesting and relevant but also some of the stories are better depicted elsewhere. "Understand" is basically a suped up short version of Flowers for Algernon, "Story of Your Life" very cool story that was the inspiration for Arrival, "Seventy-Two Letters" is an interesting story about golems and 
+**Stories of Your Life and Others** by Ted Chiang (2002) - A collection of short stories, they are pretty interesting and relevant but also some of the stories are better depicted elsewhere. "Understand" is basically a souped-up short version of Flowers for Algernon, "Story of Your Life" very cool story that was the inspiration for Arrival, "Seventy-Two Letters" is an interesting story about golems.
 
 **1984** By George Orwell (1949) - A classic dystopian novel worth reading. It was a fun read, for me I just wish there was more follow-up content I could read to explore the world further.
 
 dune.md
 
-**Neuromancer** By William Gibson (1984) - Visually rich writing of a cyberpunk future. It was the first book to introduce "cyberspace" as a concept. I found the story difficult to follow though, maybe becuase I listened to the audiobook version.
+**Neuromancer** By William Gibson (1984) - Visually rich writing of a cyberpunk future. It was the first book to introduce "cyberspace" as a concept. I found the story difficult to follow though, maybe because I listened to the audiobook version.
 
 **Do Androids Dream of Electric Sheep?** By Philip K. Dick (1968) - The book that inspired the movie Blade Runner. Slight different from the movie but provides some more backstory. Honestly I would watch Blade Runner and Blade Runner 2049 (not covered in the book but one of my favorite movies).
 
