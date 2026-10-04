@@ -1,5 +1,5 @@
 ---
-title: "General Sci-Fi Books"
+title: "Sci-Fi Books"
 excerpt: "Some of the more recent Sci-Fi books I have read that are not part of big series. Ordered by favorite or most recommended."
 ---
 
