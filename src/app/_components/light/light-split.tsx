@@ -65,7 +65,7 @@ export default function LightSplit({
     <section className="relative md:grid md:grid-cols-[minmax(0,45fr)_minmax(0,55fr)]">
       <div
         ref={band}
-        className="sticky top-[68px] z-20 h-[calc(32vh+80px)] bg-paper px-5 pb-3 pt-0 shadow-[0_1px_0_rgba(43,42,38,0.08)] md:top-0 md:h-screen md:self-start md:px-0 md:pb-8 md:pl-12 md:pr-4 md:pt-24 md:shadow-none"
+        className="sticky top-[68px] z-20 h-[calc(32vh+48px)] bg-paper px-5 pb-3 pt-0 shadow-[0_1px_0_rgba(43,42,38,0.08)] md:top-0 md:h-screen md:self-start md:px-0 md:pb-8 md:pl-12 md:pr-4 md:pt-24 md:shadow-none"
       >
         <LightPanel />
       </div>

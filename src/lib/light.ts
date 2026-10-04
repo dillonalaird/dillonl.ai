@@ -2,7 +2,7 @@
  * "Changing light": the site's paintings, each placed at the hour of day it
  * depicts, with a small palette sampled from the canvas. `accent` is dark
  * enough to read as text on paper; `shade` is the painting's deep tone, used
- * behind the image while it loads and for the scrubber track.
+ * behind the image while it loads.
  */
 export type Painting = {
   id: string;
@@ -146,12 +146,4 @@ export function dayIndexForHour(hour: number) {
 
 export function caption(p: Painting) {
   return `${p.artist} — ${p.title}${p.year ? `, ${p.year}` : ""}, ${p.medium}`;
-}
-
-export function formatHour(hour: number) {
-  const h = wrapHour(hour);
-  const hh = Math.floor(h);
-  const mm = Math.round((h - hh) * 60);
-  const fix = mm === 60 ? [hh + 1, 0] : [hh, mm];
-  return `${String(fix[0] % 24).padStart(2, "0")}:${String(fix[1]).padStart(2, "0")}`;
 }

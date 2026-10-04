@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { DAY, PAINTINGS, caption, type PaintingId } from "@/lib/light";
 import { applyAccent, currentPainting, useLight } from "./store";
-import HourScrubber from "./hour-scrubber";
 
 const STACK: PaintingId[] = [...DAY.map((d) => d.id), "charing"];
 
@@ -119,7 +118,6 @@ export default function LightPanel() {
             {s.ready ? caption(painting) : " "}
           </p>
         </div>
-        <HourScrubber />
       </div>
     </div>
   );

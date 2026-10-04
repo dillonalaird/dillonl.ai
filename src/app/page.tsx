@@ -5,10 +5,7 @@ import { HeroFx } from "@/app/_components/scroll-fx";
 import Image from "next/image";
 import DateFormatter from "@/app/_components/date-formatter";
 import LightSplit from "@/app/_components/light/light-split";
-import {
-  PaintingIndex,
-  SectionIndex,
-} from "@/app/_components/light/light-links";
+import { SectionIndex } from "@/app/_components/light/light-links";
 import Reveal from "@/app/_components/reveal";
 import SiteFooter from "@/app/_components/site-footer";
 import { getAllPosts } from "@/lib/api";
@@ -199,19 +196,6 @@ export default function Index() {
             </div>
           </section>
 
-          <section
-            data-light-section
-            className="flex flex-col justify-center px-5 md:px-12 lg:px-16 py-20 md:min-h-screen md:py-32"
-          >
-            <Label>The light</Label>
-            <p className="mb-10 max-w-md text-base leading-relaxed text-ink/60">
-              Monet painted the same places again and again, at different
-              hours. The painting beside this page starts at your local time
-              and moves through the day as you read. Drag the timeline under
-              it, or pick an hour.
-            </p>
-            <PaintingIndex />
-          </section>
         </LightSplit>
 
         <SiteFooter />

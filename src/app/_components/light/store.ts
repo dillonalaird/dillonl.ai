@@ -5,14 +5,13 @@ import {
   DAY,
   PAINTINGS,
   dayIndexForHour,
-  wrapHour,
   type Painting,
   type PaintingId,
 } from "@/lib/light";
 
 /**
  * A tiny shared store for the light: the current hour (set from the
- * visitor's clock, advanced by scrolling, or dragged on the scrubber) and an
+ * visitor's clock, advanced by scrolling) and an
  * optional hover preview that temporarily overrides it.
  */
 type State = {
@@ -42,12 +41,6 @@ export const light = {
     if (state.ready) return;
     const now = new Date();
     set({ hour: now.getHours() + now.getMinutes() / 60, ready: true });
-  },
-  setHour(hour: number) {
-    const h = wrapHour(hour);
-    if (h === state.hour) return;
-    const d = ((h - state.hour + 36) % 24) - 12; // shortest way round
-    set({ hour: h, dir: d >= 0 ? 1 : -1 });
   },
   /** Step the light by whole paintings (scrolling between sections). */
   step(delta: number) {

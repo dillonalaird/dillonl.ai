@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import cn from "classnames";
-import { DAY, PAINTINGS, formatHour, type PaintingId } from "@/lib/light";
-import { currentPainting, light, useLight } from "./store";
+import { type PaintingId } from "@/lib/light";
+import { light, useLight } from "./store";
 
 const sections: {
   label: string;
@@ -78,53 +78,5 @@ export function SectionIndex() {
         );
       })}
     </nav>
-  );
-}
-
-/** The day's paintings as a list; choosing one sets the light to its hour. */
-export function PaintingIndex() {
-  const s = useLight();
-  const current = currentPainting(s).id;
-  return (
-    <ol className="light-rule border-t">
-      {DAY.map((d) => {
-        const p = PAINTINGS[d.id];
-        const on = current === d.id;
-        return (
-          <li key={d.id} className="light-rule border-b">
-            <button
-              type="button"
-              onClick={() => {
-                light.setPreview(null);
-                light.setHour(p.hour);
-              }}
-              {...previewHandlers(d.id)}
-              aria-pressed={on}
-              className="group grid w-full grid-cols-[3.5rem_1fr] md:grid-cols-[4.5rem_1fr_auto] items-baseline gap-x-4 py-4 text-left"
-            >
-              <span
-                className={cn(
-                  "text-xs tabular-nums tracking-[0.12em] transition-colors duration-500",
-                  on ? "text-umber" : "text-ink/40",
-                )}
-              >
-                {formatHour(p.hour)}
-              </span>
-              <span
-                className={cn(
-                  "font-display text-xl md:text-2xl tracking-tight transition-[transform,color] duration-500 ease-out group-hover:translate-x-2",
-                  on ? "text-umber" : "text-ink",
-                )}
-              >
-                {p.title}
-              </span>
-              <span className="col-start-2 md:col-start-3 text-[11px] uppercase tracking-[0.22em] text-ink/45">
-                {p.year}
-              </span>
-            </button>
-          </li>
-        );
-      })}
-    </ol>
   );
 }
