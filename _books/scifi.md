@@ -3,7 +3,11 @@ title: "General Sci-Fi Books"
 excerpt: "Some of the more recent Sci-Fi books I have read that are not part of big series. Ordered by favorite or most recommended."
 ---
 
+ender.md
+
 **A Fire Upon the Deep, A Deepness in the Sky** By Vernor Vinge (1992, 1999) - Loved the world building here, the concept of zones of thought is very novel and interesting. The group mind Tines take awhile to get used to but I enjoyed their story as well.
+
+asimov.md
 
 **Project Hail Mary** By Andy Weir (2021) - A total page-turner. I loved all the engaging "science experiments" the protagonist does to solve problems. The alien character is well done and the story is exciting.
 
@@ -16,6 +20,8 @@ excerpt: "Some of the more recent Sci-Fi books I have read that are not part of 
 **Stories of Your Life and Others** by Ted Chiang (2002) - A collection of short stories, they are pretty interesting and relevant but also some of the stories are better depicted elsewhere. "Understand" is basically a suped up short version of Flowers for Algernon, "Story of Your Life" very cool story that was the inspiration for Arrival, "Seventy-Two Letters" is an interesting story about golems and 
 
 **1984** By George Orwell (1949) - A classic dystopian novel worth reading. It was a fun read, for me I just wish there was more follow-up content I could read to explore the world further.
+
+dune.md
 
 **Neuromancer** By William Gibson (1984) - Visually rich writing of a cyberpunk future. It was the first book to introduce "cyberspace" as a concept. I found the story difficult to follow though, maybe becuase I listened to the audiobook version.
 

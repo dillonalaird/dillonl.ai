@@ -2,7 +2,7 @@ import BookSection from "@/app/_components/book-section";
 import PageHero from "@/app/_components/page-hero";
 import Reveal from "@/app/_components/reveal";
 import SiteFooter from "@/app/_components/site-footer";
-import { getAllBookSections } from "@/lib/books";
+import { getBookShelf, type BookPart } from "@/lib/books";
 import markdownToHtml from "@/lib/markdownToHtml";
 
 const favorites = [
@@ -32,12 +32,30 @@ const favorites = [
   },
 ];
 
+// one entry per bolded title line, e.g. "**Dune** By Frank Herbert (1965) - ..."
+function countEntries(markdown: string) {
+  return markdown.match(/^\*\*/gm)?.length ?? 0;
+}
+
+async function partToHtml(part: BookPart) {
+  if (part.kind === "text") {
+    return { kind: "text" as const, html: await markdownToHtml(part.markdown) };
+  }
+  const { section } = part;
+  return {
+    kind: "series" as const,
+    title: section.title,
+    excerpt: section.excerpt,
+    entries: countEntries(section.content),
+    html: await markdownToHtml(section.content),
+  };
+}
+
 export default async function Books() {
-  const sections = getAllBookSections();
   const sectionsWithHtml = await Promise.all(
-    sections.map(async (section) => ({
+    getBookShelf().map(async (section) => ({
       ...section,
-      content: await markdownToHtml(section.content),
+      parts: await Promise.all(section.parts.map(partToHtml)),
     })),
   );
 
@@ -86,7 +104,7 @@ export default async function Books() {
                 <BookSection
                   title={section.title}
                   excerpt={section.excerpt}
-                  contentHtml={section.content}
+                  parts={section.parts}
                 />
               </Reveal>
             ))}
